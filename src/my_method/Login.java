@@ -1,3 +1,5 @@
+package my_method;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;

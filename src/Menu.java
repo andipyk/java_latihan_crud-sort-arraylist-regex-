@@ -1,3 +1,8 @@
+import mahasiswa.MahasiswaCreate;
+import mahasiswa.MahasiswaEditDelete;
+import mahasiswa.MahasiswaShow;
+import my_method.IO;
+
 public class Menu {
     static IO io = new IO();
 

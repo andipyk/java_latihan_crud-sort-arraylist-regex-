@@ -1,3 +1,5 @@
+package mahasiswa;
+
 import java.util.ArrayList;
 
 public class Mahasiswa implements Comparable<Mahasiswa> {

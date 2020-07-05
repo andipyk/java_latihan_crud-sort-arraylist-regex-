@@ -1,8 +1,12 @@
+package mahasiswa;
+
+import my_method.IO;
+
 import java.util.ArrayList;
 
 public class MahasiswaCreate {
     public static ArrayList<Mahasiswa> list_mahasiswa = new ArrayList<>();
-    IO IO = new IO();
+    my_method.IO IO = new IO();
 
     public void create_once() {
         System.out.println("Create & Input Data Mahasiswa");

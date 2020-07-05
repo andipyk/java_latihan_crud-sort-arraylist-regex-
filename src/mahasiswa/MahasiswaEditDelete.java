@@ -1,5 +1,10 @@
+package mahasiswa;
+
+import my_method.IO;
+import my_method.Search;
+
 public class MahasiswaEditDelete {
-    IO IO = new IO();
+    my_method.IO IO = new IO();
     Search search = new Search();
 
     public void edit_or_delete() {

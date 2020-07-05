@@ -1,3 +1,5 @@
+package my_method;
+
 import java.util.ArrayList;
 
 public class Search {
