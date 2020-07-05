@@ -1,26 +1,18 @@
 import java.util.ArrayList;
 
 public class MahasiswaCreate {
-    public static ArrayList<Mahasiswa> list_mahasiswa = new ArrayList<Mahasiswa>();
-    InputScan inputScan = new InputScan();
+    public static ArrayList<Mahasiswa> list_mahasiswa = new ArrayList<>();
+    IO IO = new IO();
 
     public void create_once() {
         System.out.println("Create & Input Data Mahasiswa");
+        Mahasiswa mahasiswa = new Mahasiswa();
 
-        int id = Integer.parseInt(inputScan.input("id"));
-        String nama = inputScan.input("nama");
-        ArrayList<Double> nilai = new ArrayList<Double>();
+        mahasiswa.setId(IO.iInput("id"));
+        mahasiswa.setNama(IO.sInput("nama"));
+        mahasiswa.setNilai(IO.dInput("ingris"), IO.dInput("fisika"), IO.dInput("algoritma"));
 
-        double inggris = Double.parseDouble(inputScan.input("inggris"));
-        double fisika = Double.parseDouble(inputScan.input("fisika"));
-        double algoritma = Double.parseDouble(inputScan.input("algoritma"));
-
-        nilai.add(inggris);
-        nilai.add(fisika);
-        nilai.add(algoritma);
-
-
-        Mahasiswa mahasiswa = new Mahasiswa(id, nama, nilai);
         list_mahasiswa.add(mahasiswa);
+        System.out.println("Data Berhasil Di Create");
     }
 }

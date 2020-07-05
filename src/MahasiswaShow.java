@@ -5,12 +5,11 @@ public class MahasiswaShow {
     public void show_all() {
         MahasiswaSort mahasiswaSort = new MahasiswaSort(MahasiswaCreate.list_mahasiswa);
         ArrayList<Mahasiswa> mahasiswa = mahasiswaSort.getSortedMahasiswaByID();
-
         Iterator iterator_mahasiswa = mahasiswa.iterator();
 
         System.out.println("### Mahasiswa ###");
-        System.out.printf("| %3s | %-15s | %-10s | %-10s | %-10s |",
-                "ID", "Nama", "Inggris", "Fisika","Algoritma");
+        System.out.printf("| %3s | %-15s | %-10s | %-10s | %-10s |", "ID", "Nama", "Inggris", "Fisika", "Algoritma");
+
         while (iterator_mahasiswa.hasNext()) {
             Mahasiswa mhs = (Mahasiswa) iterator_mahasiswa.next();
             System.out.print("\n");

@@ -1,5 +1,5 @@
 public class Menu {
-    static InputScan my_method = new InputScan();
+    static IO io = new IO();
 
     public void menu_mahasiswa() {
         String[] menu_list = {
@@ -7,9 +7,7 @@ public class Menu {
                 "Edit or Delete Data Mahasiswa",
                 "Tampilkan laporan Nilai Data Mahasiswa"
         };
-
         generate_menu(menu_list);
-
     }
 
     void generate_menu(String[] menu) {
@@ -22,7 +20,7 @@ public class Menu {
                 nomor++;
             }
             System.out.println("99. Exit");
-            paramsMenu = my_method.input("menu");
+            paramsMenu = io.sInput("menu");
             System.out.println();
             switch_menu(paramsMenu);
         }

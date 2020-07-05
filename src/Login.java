@@ -5,14 +5,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Login {
-    static InputScan inputScan = new InputScan();
+    static IO IO = new IO();
 
     public boolean login() throws FileNotFoundException {
         String repeat = "y";
 
         while (repeat.equals("y")) {
-            String input_username = inputScan.input("username");
-            String input_password = inputScan.input("password");
+            String input_username = IO.sInput("username");
+            String input_password = IO.sInput("password");
             boolean check_regex = is_match_regex(input_username, input_password);
             boolean match_file = is_match_with_file(input_username, input_password);
 
@@ -24,8 +24,9 @@ public class Login {
                 return true;
             }
 
-            repeat = inputScan.input("coba lagi?(Y/n)").toLowerCase();
+            repeat = IO.sInput("coba lagi?(Y/n)").toLowerCase();
             System.out.println("");
+            System.out.flush();
         }
         return false;
     }
@@ -51,7 +52,6 @@ public class Login {
         Matcher matcher = regex.matcher(str);
         return matcher.find();
     }
-
 
     /**
      * Sebagai matching email dan password dengan data file.txt
